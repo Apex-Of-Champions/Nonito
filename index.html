@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en" class="dark-mode">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Portfolio of Nonito L. Molijon Jr., Computer Engineer, AI Builder, Technology Founder & Lead Technopreneur. Designing intelligent systems, embedded IoT devices, computer vision frameworks, and scalable software solutions." />
+  <meta name="keywords"
+    content="Nonito Molijon, Computer Engineer, AI Builder, Technopreneur, Apex of Champions, ESP32, LoRa, Machine Learning, Computer Vision, Philippines Developer" />
+  <meta name="author" content="Nonito L. Molijon Jr." />
+
+  <!-- OpenGraph Metadata -->
+  <meta property="og:title" content="Nonito L. Molijon Jr. | Computer Engineer & Technopreneur" />
+  <meta property="og:description"
+    content="I engineer intelligent systems at the intersection of AI, software, and hardware for real-world impact." />
+  <meta property="og:image" content="assets/image.webp" />
+  <meta property="og:type" content="website" />
+
+  <meta name="theme-color" content="#06080d">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <title>Nonito L. Molijon Jr. | Computer Engineer, AI Builder & Technopreneur</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet">
+
+  <script>
+    // Theme initialization before paint
+    (() => {
+      let saved = null;
+      try { saved = localStorage.getItem('portfolio-theme'); } catch { }
+      const isDark = saved === 'dark' || (saved !== 'light');
+      document.documentElement.classList.toggle('dark-mode', isDark);
+    })();
+  </script>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Particle Background Canvas & Spotlight glow -->
+  <canvas id="particleCanvas" aria-hidden="true"></canvas>
+  <div class="grid-bg-overlay"></div>
+  <div class="cursor-spotlight" id="cursorSpotlight"></div>
+
+  <!-- FLOATING GLASS NAVIGATION -->
+  <nav class="navbar" id="navbar">
+    <a href="#home" class="nav-brand">
+      <div class="brand-logo">NLM</div>
+      <span>NONITO MOLIJON</span>
+      <div class="status-pulse">
+        <span class="pulse-dot"></span>
+        <span>SYSTEM ONLINE</span>
+      </div>
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#projects" class="nav-link">Case Studies</a></li>
+      <li><a href="#architecture" class="nav-link">Architecture</a></li>
+      <li><a href="#capabilities" class="nav-link">Capabilities</a></li>
+      <li><a href="#terminal" class="nav-link">CLI Sandbox</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Theme">
+        <span id="themeIcon">🌙</span>
+      </button>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-controls="navLinks" aria-expanded="false"
+        aria-label="Open Navigation Menu">☰</button>
+    </div>
+  </nav>
+
+  <main id="main">
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="hero-badge-pill">
+            <span>●</span>
+            <span>AI ENGINEERING / SOFTWARE / EMBEDDED SYSTEMS</span>
+          </div>
+
+          <h1 class="hero-title">
+            Engineering<br>
+            <span class="text-gradient">intelligence.</span><br>For the real world.
+          </h1>
+
+          <p class="hero-subtitle">
+            I’m Nonito Molijon, a computer engineer and technical founder. I connect AI, embedded hardware, and
+            full-stack software to build systems that work beyond the screen.
+          </p>
+
+          <div class="hero-rotator">
+            <span>CURRENT FOCUS</span>
+            <span class="rotator-text" id="rotatorText">CEO & Founder @ Apex of Champions OPC</span>
+          </div>
+
+          <div class="hero-ctas">
+            <a href="#projects" class="btn btn-primary">Explore Case Studies ↗</a>
+            <a href="#contact" class="btn btn-secondary">Let’s talk</a>
+          </div>
+          <div class="hero-note">BASED IN THE PHILIPPINES <span>FROM SENSOR TO SOFTWARE</span></div>
+        </div>
+
+        <!-- FUTURISTIC AI PERSONAL IDENTITY SHOWCASE -->
+        <div class="hero-portrait-container">
+          <div class="portrait-identity-showcase" id="portraitCard">
+            <!-- Orbital Stage with Neural Network & Interactive Particle Arena -->
+            <div class="showcase-orbit-stage" aria-hidden="true">
+              <!-- Soft Holographic Backing Glow -->
+              <div class="orbit-glow-aura"></div>
+
+              <!-- Rotating Holographic Energy Rings -->
+              <div class="orbit-ring ring-outer-dashed"></div>
+              <div class="orbit-ring ring-middle-gradient"></div>
+              <div class="orbit-ring ring-inner-accent"></div>
+
+              <!-- AI Neural Network Web & Interconnecting Laser Vectors -->
+              <svg class="neural-web-svg" viewBox="0 0 380 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line x1="65" y1="75" x2="135" y2="130" class="neural-wire wire-pulse-1" />
+                <line x1="315" y1="70" x2="250" y2="130" class="neural-wire wire-pulse-2" />
+                <line x1="50" y1="260" x2="125" y2="235" class="neural-wire wire-pulse-3" />
+                <line x1="325" y1="275" x2="255" y2="235" class="neural-wire wire-pulse-4" />
+                <line x1="65" y1="75" x2="50" y2="260" class="neural-wire-subtle" />
+                <line x1="315" y1="70" x2="325" y2="275" class="neural-wire-subtle" />
+              </svg>
+
+              <!-- Intelligent Systems & Neural Nodes -->
+              <div class="floating-tech-node node-sys-ai">
+                <span class="tech-node-dot"></span>
+                <span class="tech-node-text">sys.ai</span>
+              </div>
+              <div class="floating-tech-node node-tensor">
+                <span class="tech-node-icon">⟨tensor⟩</span>
+              </div>
+              <div class="floating-tech-node node-lambda">
+                <span class="tech-node-icon">λ_core</span>
+              </div>
+              <div class="floating-tech-node node-vision">
+                <span class="tech-node-dot pulse"></span>
+                <span class="tech-node-text">neural.net</span>
+              </div>
+
+              <!-- Floating Particles & Orbiting Sparks -->
+              <span class="orbit-particle p-spark-top">✦</span>
+              <span class="orbit-particle p-spark-tr">✧</span>
+              <span class="orbit-particle p-node-tl">◌</span>
+              <span class="orbit-particle p-node-br">○</span>
+              <span class="orbit-particle p-node-bl">✦</span>
+              <span class="orbit-particle p-spark-mid">✧</span>
+            </div>
+
+            <!-- Perfect Circular Glassmorphism Portrait Frame -->
+            <div class="circular-frame-anchor">
+              <div class="circular-glass-bezel">
+                <div class="circular-avatar-mask">
+                  <img src="assets/image.webp" width="1200" height="1280" alt="Nonito L. Mollijon Jr."
+                    fetchpriority="high" decoding="async" class="circular-profile-img" />
+                  <div class="glass-lens-overlay" aria-hidden="true"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Identity Presentation Below Circle -->
+            <div class="identity-showcase-meta">
+              <div class="identity-motto">ENGINEER. BUILDER. FOUNDER.</div>
+              <h2 class="identity-full-name">Nonito L. Mollijon Jr.</h2>
+              <div class="identity-role-chip">
+                <span class="role-chip-indicator"></span>
+                <span class="role-chip-item">AI Expert</span>
+                <span class="role-chip-divider">•</span>
+                <span class="role-chip-item">Technoprenour</span>
+                <span class="role-chip-divider">•</span>
+                <span class="role-chip-item">Researcher</span>
+              </div>
+              <div class="profile-businesses" role="group" aria-labelledby="profileBusinessesTitle">
+                <h3 class="profile-businesses-title" id="profileBusinessesTitle">Businesses</h3>
+                <div class="profile-businesses-row">
+                  <a class="profile-business" href="https://www.facebook.com/profile.php?id=61587213903017"
+                    target="_blank" rel="noopener noreferrer" aria-label="Business 1 on Facebook (opens in a new tab)">
+                    <span class="profile-business-mark">
+                      <svg class="profile-business-ring" viewBox="0 0 100 100" role="img" aria-label="AC TECH COMPANY">
+                        <defs>
+                          <path id="businessAcArc" d="M 10,54 A 40,40 0 0,1 90,54" />
+                        </defs>
+                        <circle class="profile-business-inner-ring" cx="50" cy="54" r="32" />
+                        <path class="profile-business-accent"
+                          d="M 8,47 A 43,43 0 0,0 11,70 M 92,47 A 43,43 0 0,1 89,70" />
+                        <text>
+                          <textPath href="#businessAcArc" startOffset="50%" text-anchor="middle">AC TECH COMPANY
+                          </textPath>
+                        </text>
+                      </svg>
+                      <img class="profile-business-logo" src="assets/apex-of-champions-logo.jpg" width="1765"
+                        height="1765" alt="Apex of Champions logo" decoding="async" />
+                    </span>
+                    <span class="profile-business-name">Apex of Champion</span>
+                  </a>
+                  <a class="profile-business" href="https://www.facebook.com/profile.php?id=61574905885373"
+                    target="_blank" rel="noopener noreferrer" aria-label="Business 2 on Facebook (opens in a new tab)">
+                    <span class="profile-business-mark">
+                      <svg class="profile-business-ring" viewBox="0 0 100 100" role="img"
+                        aria-label="WS CLOTHING SUBLIMATION">
+                        <defs>
+                          <path id="businessWsArc" d="M 10,54 A 40,40 0 0,1 90,54" />
+                        </defs>
+                        <circle class="profile-business-inner-ring" cx="50" cy="54" r="32" />
+                        <path class="profile-business-accent"
+                          d="M 8,47 A 43,43 0 0,0 11,70 M 92,47 A 43,43 0 0,1 89,70" />
+                        <text>
+                          <textPath href="#businessWsArc" startOffset="50%" text-anchor="middle">WS CLOTHING SUBLIMATION
+                          </textPath>
+                        </text>
+                      </svg>
+                      <img class="profile-business-logo" src="assets/sublime-collective-logo.jpg" width="940"
+                        height="788" alt="Sublime Collective Clothing Shop logo" decoding="async" />
+                    </span>
+                    <span class="profile-business-name">WS Sublime Collective - Clothing Shop</span>
+                  </a>
+                  <a class="profile-business" href="https://www.facebook.com/rnstatisticalresearchconsultancy"
+                    target="_blank" rel="noopener noreferrer"
+                    aria-label="RN Statistical Research Consultancy on Facebook (opens in a new tab)">
+                    <span class="profile-business-mark">
+                      <svg class="profile-business-ring" viewBox="0 0 100 100" role="img"
+                        aria-label="R&amp;N RESEARCH CONSULTANCY">
+                        <defs>
+                          <path id="businessRnArc" d="M 10,54 A 40,40 0 0,1 90,54" />
+                        </defs>
+                        <circle class="profile-business-inner-ring" cx="50" cy="54" r="32" />
+                        <path class="profile-business-accent"
+                          d="M 8,47 A 43,43 0 0,0 11,70 M 92,47 A 43,43 0 0,1 89,70" />
+                        <text>
+                          <textPath href="#businessRnArc" startOffset="50%" text-anchor="middle">R&amp;N RESEARCH
+                            CONSULTANCY</textPath>
+                        </text>
+                      </svg>
+                      <img class="profile-business-logo" src="assets/rn-research-logo.jpg" width="1024" height="1024"
+                        alt="R&amp;N Statistical &amp; Research Consultancy logo" decoding="async" />
+                    </span>
+                    <span class="profile-business-name">RN Statistical Research Consultancy</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMPACT TELEMETRY STRIP -->
+    <div class="impact-strip">
+      <div class="container impact-grid">
+        <div class="impact-card">
+          <div class="impact-number">15+</div>
+          <div class="impact-label">Team Employees<br>Collaborated With</div>
+        </div>
+        <div class="impact-card">
+          <div class="impact-number">4+</div>
+          <div class="impact-label">Years Experience<br>Building Digital Tech</div>
+        </div>
+        <div class="impact-card">
+          <div class="impact-number">50+</div>
+          <div class="impact-label">Engineering &<br>AI Projects Delivered</div>
+        </div>
+        <div class="impact-card">
+          <div class="impact-number">10+</div>
+          <div class="impact-label">Enterprise Systems<br>Architected</div>
+        </div>
+        <div class="impact-card">
+          <div class="impact-number">500+</div>
+          <div class="impact-label">Clients & Organizations<br>Supported</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT & PHILOSOPHY -->
+    <section id="about">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">01 / OVERVIEW & PHILOSOPHY</div>
+          <h2 class="section-title">One engineering mindset.<br>Across the entire system.</h2>
+          <p class="section-desc">Bridging embedded IoT, computer vision, data science, and business operations into
+            production-grade systems.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="philosophy-card">
+            <div class="philosophy-quote">
+              "Engineering isn't just writing code or designing circuits—it is <highlight>architecting reliable systems
+              </highlight> that solve critical human & industrial challenges."
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">
+              As a Computer Engineer and Technopreneur, I lead software, hardware integration, and AI innovation across
+              multiple ventures including Apex of Champions OPC and R&N Statistical Research Consultancy.
+            </p>
+          </div>
+
+          <div class="about-pillars">
+            <div class="pillar-item">
+              <div class="pillar-title">Technical Hardware & IoT Mindset</div>
+              <div class="pillar-desc">Designing low-latency ESP32 embedded systems, LoRa mesh wireless networks, and
+                sensor data pipelines.</div>
+            </div>
+            <div class="pillar-item">
+              <div class="pillar-title">Artificial Intelligence & Vision</div>
+              <div class="pillar-desc">Deploying machine learning models, OpenCV synthetic image classifiers, and
+                automated AI data workflows.</div>
+            </div>
+            <div class="pillar-item">
+              <div class="pillar-title">Technopreneurship & Strategy</div>
+              <div class="pillar-desc">Transforming complex technical concepts into scalable business systems, client
+                digital solutions, and high-impact products.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE PROJECT CASE STUDIES -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">02 / ENGINEERING CASE STUDIES</div>
+          <h2 class="section-title">Ideas engineered into<br>working systems.</h2>
+          <p class="section-desc">Explore the decisions, architecture, and outcomes behind four builds spanning
+            connected hardware, computer vision, and automation.</p>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="project-filter-bar">
+          <button class="filter-btn active" onclick="filterProjects('all', this)">All Systems</button>
+          <button class="filter-btn" onclick="filterProjects('ai', this)">Artificial Intelligence</button>
+          <button class="filter-btn" onclick="filterProjects('iot', this)">IoT & Hardware</button>
+          <button class="filter-btn" onclick="filterProjects('desktop', this)">Desktop & Systems</button>
+          <button class="filter-btn" onclick="filterProjects('analytics', this)">Analytics & Data</button>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+          <!-- Case Project 1 -->
+          <article class="case-card" data-category="iot ai" onclick="openCaseModal(0)">
+            <div class="case-thumb-box">
+              <img src="assets/ailert_cover.webp" width="1200" height="670" loading="lazy" decoding="async"
+                alt="AI-LERT IoT System" />
+              <span class="case-badge-pill">IoT & AI</span>
+            </div>
+            <div class="case-body">
+              <div class="case-number">BUILD / 01</div>
+              <h3 class="case-title">AI-LERT System <span class="case-title-arrow">↗</span></h3>
+              <p class="case-summary">Solar-powered IoT seismic detection system combining ESP32 microcontrollers, LoRa
+                mesh communication, AI decision support, and mobile navigation.</p>
+              <div class="case-tech-tags">
+                <span class="tech-tag">ESP32</span>
+                <span class="tech-tag">LoRa Mesh</span>
+                <span class="tech-tag">Flutter</span>
+                <span class="tech-tag">AI Pipeline</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Case Project 2 -->
+          <article class="case-card" data-category="ai" onclick="openCaseModal(1)">
+            <div class="case-thumb-box">
+              <img src="assets/classifier_cover.webp" width="1200" height="670" loading="lazy" decoding="async"
+                alt="AI Image Classifier" />
+              <span class="case-badge-pill">Computer Vision</span>
+            </div>
+            <div class="case-body">
+              <div class="case-number">BUILD / 02</div>
+              <h3 class="case-title">AI Image Classifier <span class="case-title-arrow">↗</span></h3>
+              <p class="case-summary">Computer vision framework engineered to detect synthetic and AI-generated media
+                versus authentic photography with high confidence scoring.</p>
+              <div class="case-tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">OpenCV</span>
+                <span class="tech-tag">Machine Learning</span>
+                <span class="tech-tag">PyTorch</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Case Project 3 -->
+          <article class="case-card" data-category="desktop" onclick="openCaseModal(2)">
+            <div class="case-thumb-box">
+              <img src="assets/idsystem_cover.webp" width="1200" height="670" loading="lazy" decoding="async"
+                alt="Offline ID Package System" />
+              <span class="case-badge-pill">Desktop System</span>
+            </div>
+            <div class="case-body">
+              <div class="case-number">BUILD / 03</div>
+              <h3 class="case-title">Offline ID Package System <span class="case-title-arrow">↗</span></h3>
+              <p class="case-summary">Desktop automation suite designed for automated background removal, face cropping,
+                and print sheet layout generation for high-volume photo processing.</p>
+              <div class="case-tech-tags">
+                <span class="tech-tag">Desktop GUI</span>
+                <span class="tech-tag">Image Processing</span>
+                <span class="tech-tag">Automation</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Case Project 4 -->
+          <article class="case-card" data-category="analytics" onclick="openCaseModal(3)">
+            <div class="case-thumb-box">
+              <img src="assets/researchengine_cover.webp" width="1200" height="670" loading="lazy" decoding="async"
+                alt="R&N Research Engine" />
+              <span class="case-badge-pill">Data Analytics</span>
+            </div>
+            <div class="case-body">
+              <div class="case-number">BUILD / 04</div>
+              <h3 class="case-title">R&N Research Engine <span class="case-title-arrow">↗</span></h3>
+              <p class="case-summary">Research analytics and statistical modelling platform combining data processing
+                workflows with custom AI productivity assistance.</p>
+              <div class="case-tech-tags">
+                <span class="tech-tag">Data Science</span>
+                <span class="tech-tag">AI Workflows</span>
+                <span class="tech-tag">Statistical Models</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASE STUDY MODAL -->
+    <div class="case-modal-overlay" id="caseModalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle"
+      aria-hidden="true" onclick="closeCaseModalOnBackdrop(event)">
+      <div class="case-modal-container">
+        <button class="modal-close-btn" onclick="closeCaseModal()" aria-label="Close Case Study">×</button>
+        <img id="modalImg" class="modal-header-img" alt="Case Study Image" />
+        <h2 id="modalTitle" class="font-display" style="font-size: 2rem; margin-bottom: 8px;"></h2>
+        <div id="modalCategory" class="font-mono text-accent-cyan" style="font-size: 0.85rem; margin-bottom: 20px;">
+        </div>
+
+        <div id="caseDetails">
+          <div class="case-block-grid">
+            <div class="case-info-box">
+              <h4 style="color: var(--accent-cyan); margin-bottom: 6px;">IDENTIFIED CHALLENGE</h4>
+              <p id="modalProblem" style="font-size: 0.88rem; color: var(--text-muted);"></p>
+            </div>
+            <div class="case-info-box">
+              <h4 style="color: var(--accent-emerald); margin-bottom: 6px;">PROPOSED SOLUTION</h4>
+              <p id="modalSolution" style="font-size: 0.88rem; color: var(--text-muted);"></p>
+            </div>
+          </div>
+
+          <div class="modal-section-title">// SYSTEM ARCHITECTURE FLOW</div>
+          <p id="modalArchitecture" style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 20px;"></p>
+
+          <div class="modal-section-title">// ENGINEERING CONSIDERATIONS</div>
+          <p id="modalConsiderations" class="section-desc"></p>
+          <div class="modal-section-title">// TECHNOLOGIES USED</div>
+          <div id="modalTechStack" class="case-tech-tags" style="margin-bottom: 20px;"></div>
+
+          <div class="modal-section-title">// REPORTED OUTCOMES</div>
+          <p id="modalImpact" style="font-size: 0.9rem; color: var(--text-main); font-weight: 500;"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SYSTEM ARCHITECTURE DIAGRAM SECTION -->
+    <section id="architecture">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">03 / REAL-WORLD SYSTEM PIPELINE</div>
+          <h2 class="section-title">From a physical signal<br>to an intelligent response.</h2>
+          <p class="section-desc">Interactive topology illustrating how telemetry flows from physical sensors into
+            embedded hardware, edge processing, and user dashboards.</p>
+        </div>
+
+        <div class="arch-container">
+          <div class="arch-flow-wrapper">
+            <div class="arch-node active" onclick="selectArchNode(0)">
+              <span class="arch-node-icon" aria-hidden="true">01</span>
+              <div class="arch-node-title">Sensors & Hardware</div>
+              <div class="arch-node-desc">ESP32 / Accelerometers / Solar</div>
+            </div>
+            <div class="arch-connector">➔</div>
+            <div class="arch-node" onclick="selectArchNode(1)">
+              <span class="arch-node-icon" aria-hidden="true">02</span>
+              <div class="arch-node-title">LoRa Mesh Gateway</div>
+              <div class="arch-node-desc">Long-Range Telemetry Link</div>
+            </div>
+            <div class="arch-connector">➔</div>
+            <div class="arch-node" onclick="selectArchNode(2)">
+              <span class="arch-node-icon" aria-hidden="true">03</span>
+              <div class="arch-node-title">Edge AI Engine</div>
+              <div class="arch-node-desc">OpenCV & ML Inference</div>
+            </div>
+            <div class="arch-connector">➔</div>
+            <div class="arch-node" onclick="selectArchNode(3)">
+              <span class="arch-node-icon" aria-hidden="true">04</span>
+              <div class="arch-node-title">Cloud Microservices</div>
+              <div class="arch-node-desc">REST APIs & Data Models</div>
+            </div>
+            <div class="arch-connector">➔</div>
+            <div class="arch-node" onclick="selectArchNode(4)">
+              <span class="arch-node-icon" aria-hidden="true">05</span>
+              <div class="arch-node-title">Client Dashboards</div>
+              <div class="arch-node-desc">Flutter & Web Interfaces</div>
+            </div>
+          </div>
+
+          <div class="arch-details-panel" id="archDetailsPanel" aria-live="polite">
+            <strong>NODE STATUS: SENSORS & HARDWARE</strong><br>
+            Low-power ESP32 microcontroller reading 3-axis accelerometer values at 100Hz with custom solar charging
+            firmware and battery monitoring circuits.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAPABILITIES & SKILLS -->
+    <section id="capabilities">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">04 / CORE COMPETENCIES</div>
+          <h2 class="section-title">Depth where it matters.<br>Range to connect it all.</h2>
+          <p class="section-desc">A multi-disciplinary matrix covering software architecture, artificial intelligence,
+            embedded electronics, and executive leadership.</p>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card">
+            <span class="skill-index">01 // SOFTWARE ENGINEERING</span>
+            <h3 class="skill-card-title">Development & Architecture</h3>
+            <ul class="skill-list">
+              <li class="skill-item">Full-Stack Web Systems</li>
+              <li class="skill-item">Mobile App Development (Flutter)</li>
+              <li class="skill-item">REST & GraphQL API Design</li>
+              <li class="skill-item">Database Management (SQL/NoSQL)</li>
+              <li class="skill-item">Clean Architecture & Microservices</li>
+            </ul>
+          </article>
+
+          <article class="skill-card">
+            <span class="skill-index">02 // ARTIFICIAL INTELLIGENCE</span>
+            <h3 class="skill-card-title">AI & Computer Vision</h3>
+            <ul class="skill-list">
+              <li class="skill-item">OpenCV & Synthetic Media Classification</li>
+              <li class="skill-item">Machine Learning Workflows</li>
+              <li class="skill-item">AI Workflow Automation</li>
+              <li class="skill-item">Prompt Engineering & LLM APIs</li>
+              <li class="skill-item">Statistical Data Modeling</li>
+            </ul>
+          </article>
+
+          <article class="skill-card">
+            <span class="skill-index">03 // HARDWARE & IOT</span>
+            <h3 class="skill-card-title">Embedded Systems</h3>
+            <ul class="skill-list">
+              <li class="skill-item">ESP32 & Microcontroller Firmware</li>
+              <li class="skill-item">LoRa / Wireless Sensor Networks</li>
+              <li class="skill-item">Hardware-Software Integration</li>
+              <li class="skill-item">Seismic & Environmental Telemetry</li>
+              <li class="skill-item">Circuit Prototyping & Testing</li>
+            </ul>
+          </article>
+
+          <article class="skill-card">
+            <span class="skill-index">04 // TECHNOPRENEURSHIP</span>
+            <h3 class="skill-card-title">Venture & Consulting</h3>
+            <ul class="skill-list">
+              <li class="skill-item">Executive Technology Leadership</li>
+              <li class="skill-item">Research & Analytics Consultancy</li>
+              <li class="skill-item">Digital Product Development</li>
+              <li class="skill-item">E-Commerce & Virtual Assistance</li>
+              <li class="skill-item">Strategic Client Consulting</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEVELOPER TERMINAL / CLI SANDBOX -->
+    <section id="terminal">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">05 / INTERACTIVE CLI SANDBOX</div>
+          <h2 class="section-title">A different way to explore.</h2>
+          <p class="section-desc">Explore my work from the command line. Start with help, or select a command below.
+            This is a local portfolio sandbox.</p>
+        </div>
+
+        <div class="terminal-container">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <div class="dot-btn dot-red"></div>
+              <div class="dot-btn dot-yellow"></div>
+              <div class="dot-btn dot-green"></div>
+            </div>
+            <div class="terminal-title">nonito@nlm-lab: ~ (bash)</div>
+            <div style="width: 40px;"></div>
+          </div>
+
+          <div class="terminal-body" id="terminalBody">
+            <div class="terminal-output" id="terminalOutput" role="log" aria-live="polite">
+              Welcome to NLM Intelligent Systems CLI Terminal [v4.2.0-release]
+              Type '<span class="text-accent-cyan">help</span>' to view all available commands.
+            </div>
+
+            <div class="terminal-prompt-line">
+              <span class="prompt-symbol">nonito@nlm-lab:~$</span>
+              <input type="text" id="terminalInput" class="terminal-input" placeholder="Type command here..."
+                aria-label="Terminal command" autocomplete="off" spellcheck="false" maxlength="300" />
+            </div>
+          </div>
+        </div>
+        <div class="terminal-hints" aria-label="Suggested terminal commands"><button class="quick-btn"
+            data-command="help">help ↵</button><button class="quick-btn" data-command="projects">projects
+            ↵</button><button class="quick-btn" data-command="whoami">whoami ↵</button><button class="quick-btn"
+            data-command="clear">clear ↵</button></div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE & LEADERSHIP SECTION -->
+    <section id="experience">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">06 / LEADERSHIP & MILESTONES</div>
+          <h2 class="section-title">Building technology.<br>Leading the people behind it.</h2>
+          <p class="section-desc">From product leadership to research evaluation: engineering judgment applied beyond
+            the code.</p>
+        </div>
+
+        <div class="experience-grid">
+          <!-- Story 1 -->
+          <a class="exp-card" href="https://www.facebook.com/100006818911497/posts/4442014172702503/?app=fbl" target="_blank" rel="noopener noreferrer" aria-label="Judge for DSTF 2026 on Facebook (opens in a new tab)">
+            <div class="exp-media">
+              <img src="assets/image2.webp" width="1200" height="900" loading="lazy" decoding="async" alt="Judge for DSTF 2026" />
+            </div>
+            <div class="exp-body">
+              <div class="exp-meta">DSTF 2026 · RESEARCH JUDGE</div>
+              <h3 class="exp-title">Judge for DSTF 2026</h3>
+              <p class="exp-desc">Evaluated research projects and technology innovations at the Division Science Technology Fair.</p>
+            </div>
+          </a>
+
+          <!-- Story 2 -->
+          <a class="exp-card" href="https://www.facebook.com/61587213903017/posts/122121265011240463/?app=fbl" target="_blank" rel="noopener noreferrer" aria-label="CEO &amp; Founder at Apex of Champions on Facebook (opens in a new tab)">
+            <div class="exp-media">
+              <img src="assets/img1.webp" width="1200" height="1600" loading="lazy" decoding="async" alt="CEO Apex of Champions" />
+            </div>
+            <div class="exp-body">
+              <div class="exp-meta">APEX OF CHAMPIONS OPC · CEO</div>
+              <h3 class="exp-title">CEO &amp; Founder</h3>
+              <p class="exp-desc">Overseeing software engineering, e-commerce infrastructure, and technological strategy.</p>
+            </div>
+          </a>
+
+          <!-- Story 3 -->
+          <a class="exp-card" href="https://www.facebook.com/61572614812853/posts/122209590626753827/?app=fbl" target="_blank" rel="noopener noreferrer" aria-label="Resource Speaker — Engr. Nonito L. Molijon Jr. on Facebook (opens in a new tab)">
+            <div class="exp-media">
+              <img src="assets/resource-speaker.jpg" width="1024" height="576" loading="lazy" decoding="async" alt="Resource Speaker — Engr. Nonito L. Molijon Jr." />
+            </div>
+            <div class="exp-body">
+              <div class="exp-meta">RESOURCE SPEAKER</div>
+              <h3 class="exp-title">Resource Speaker — Engr. Nonito L. Molijon Jr.</h3>
+              <p class="exp-desc">Resource Speaker and CEO &amp; Founder of AC: Apex of Champions Tech Company.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT COMMAND CENTER -->
+    <section id="contact">
+      <div class="container">
+        <div class="contact-card-main">
+          <div>
+            <div class="section-tag">07 / CONTACT & PARTNERSHIPS</div>
+            <h2 class="section-title" style="font-size: 2.4rem; margin-bottom: 16px;">Let's build intelligent systems
+              together.</h2>
+            <p style="color: var(--text-muted); margin-bottom: 28px;">
+              Available for high-impact software engineering, AI deployment, IoT system design, research consulting, and
+              technopreneurship partnerships.
+            </p>
+            <a href="https://apex-of-champions.vercel.app" target="_blank" rel="noopener" class="btn btn-primary">
+              Visit Company Portal: apex-of-champions.vercel.app ↗
+            </a>
+          </div>
+
+          <div class="contact-info-list">
+            <div class="contact-item-row">
+              <span class="contact-label">Direct Mobile / Phone</span>
+              <div class="contact-val">+63 955 398 3149</div>
+              <div class="contact-quick-btns">
+                <a href="tel:+639553983149" class="quick-btn">Call</a>
+                <a href="sms:+639553983149" class="quick-btn">SMS</a>
+                <a href="https://wa.me/639553983149" target="_blank" rel="noopener" class="quick-btn">WhatsApp</a>
+              </div>
+            </div>
+
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nonitolabitoriamolijon%40gmail.com" target="_blank"
+              rel="noopener" class="contact-item-row">
+              <span class="contact-label">Direct Email</span>
+              <div class="contact-val">nonitolabitoriamolijon@gmail.com</div>
+            </a>
+
+            <a href="https://www.google.com/maps/search/?api=1&query=Sampao%2C+Isulan%2C+Sultan+Kudarat%2C+Philippines"
+              target="_blank" rel="noopener" class="contact-item-row">
+              <span class="contact-label">Headquarters Location</span>
+              <div class="contact-val">Sampao, Isulan · Sultan Kudarat, Philippines 📍</div>
+            </a>
+
+            <a href="https://www.linkedin.com/in/nonito-labitoria-molijon-jr-741b71410/" target="_blank" rel="noopener"
+              class="contact-item-row">
+              <span class="contact-label">LinkedIn Profile</span>
+              <div class="contact-val">linkedin.com/in/nonito-labitoria-molijon-jr-741b71410/ ↗</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-flex">
+      <span>© 2026 NONITO L. MOLIJON JR. ALL RIGHTS RESERVED.</span>
+      <span>COMPUTER ENGINEER // AI BUILDER // TECHNOPRENEUR</span>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT LOGIC & INTERACTION ENGINE -->
+  <script src="js/projects.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/animations.js" defer></script>
+</body>
+
+</html>
